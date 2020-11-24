@@ -1,0 +1,223 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0 auto;
+	font-family: "Poppins", sans-serif;
+}
+
+header {
+	height: 90px;
+	background: #262626;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 4px;
+	padding-top: 30px;
+	font-size: 40px;
+	margin: 0;
+}
+
+input {
+	outline: none;
+}
+
+/* style section header*/
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	line-height: 85px;
+}
+.logo a {
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+	letter-spacing: 5px;
+}
+nav {
+	float: right;
+	line-height: 100px;
+}
+nav a {
+	text-decoration: none;
+	letter-spacing: 4px;
+	font-size: 15px;
+	margin: 0 10px;
+	color: #fff;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	background: url("./img/image\ bg.jpeg") top center;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*Fin  section header*/
+
+/*Section À propos */
+.content-area {
+	background: #ebebeb;
+}
+
+.content-area p {
+	padding: 2% 0px;
+	line-height: 30px;
+	margin: 0;
+}
+
+/* Fin Section À propos */
+
+/* section contact */
+.contact_container {
+	background-color: #f5f5f5;
+}
+
+/* aligne les box horizontalement avec le même ecart*/
+.info-wrapper {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.contact-box {
+	text-align: center;
+	width: 230px;
+	height: 230px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+}
+
+.contact-icon {
+	margin: 0 auto;
+	font-size: 22px;
+	border-radius: 50%;
+	padding: 8px;
+	border: 2px dotted;
+	width: 14%;
+}
+
+.form-container {
+	background-color: white;
+	width: 40%;
+	box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+	padding: 20px;
+	height: 100%;
+}
+.form-item {
+	display: flex;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+
+.form-item input {
+	padding: 12px;
+	width: 47%;
+}
+
+.form-container textarea {
+	width: 100%;
+	padding-left: 12px;
+	font-size: 15px;
+}
+
+.button-container {
+	margin-top: 20px;
+	height: 34px;
+	width: 197px;
+	background-color: white;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+}
+
+/* On montre le premier texte */
+.img-btn {
+	display: block;
+}
+/* On cache le second texte */
+.text-button {
+	display: none;
+}
+
+/* On fait disparaitre le premier texte au passage de la souris. */
+.button:hover .img-btn {
+	display: none;
+}
+/* On fait apparaitre le second texte au passage de la souris. */
+.button:hover .text-button {
+	display: block;
+	text-transform: uppercase;
+}
+
+/* fin style section contact */
+.form-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 83%;
+	margin: 20px auto;
+}
+
+/* Footer */
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	width: 83%;
+	margin: 0 auto;
+}
+
+.footer li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+footer li ::before {
+	content: "\ea1d";
+}
+
+footer ul {
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+}
+/*.footer-form {
+	border-radius: 4px;
+}*/
+.footer-email {
+	width: 60%;
+	padding: 12px 8px;
+	border: 1px solid;
+	border-radius: 2px 0;
+}
+
+.footer-btn {
+	width: 39%;
+	padding: 12px 8px;
+	transition: 0.3s;
+	border: 1px solid;
+	border-radius: 2px 0;
+	font-size: 14px;
+}
+.fa-chevron-right {
+	font-size: 14px;
+}
