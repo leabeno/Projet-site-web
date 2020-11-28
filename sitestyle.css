@@ -279,11 +279,6 @@ footer ul {
 	text-align: center;
 }
 
-.animation{
-	opacity: 0;
-	transition-property: opacity,transform;
-    transform: translate3d(100px,0,0);
-}
 
 .fa-bed,.fa-home,.fa-lightbulb{
 	font-size: 36px;
