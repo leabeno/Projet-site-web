@@ -82,6 +82,24 @@ nav a {
 
 /* Fin Section À propos */
 
+
+/* Section Vendre */
+.vendre_container {
+	background-color: #cfcfcf;
+}
+
+.form-estimation {
+	margin: auto;
+	background-color: white;
+	width: 40%;
+	box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+	padding: 20px;
+	height: 110%;
+}
+
+/* Fin Section Vendre */
+
+
 /* section contact */
 .contact_container {
 	background-color: #f5f5f5;
