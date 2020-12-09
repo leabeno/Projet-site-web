@@ -1,0 +1,84 @@
+.container-assistance{
+    background-image: url(img/map-bg.jpg); 
+    height: 985.2px;
+    transform: translate(0px, -0.802px);
+        padding: 70px 0;
+}
+
+
+.displayAssistance{
+    display: flex;
+    justify-content: space-evenly;
+
+    flex-direction: row;
+    margin-left: 5%;
+    padding-top: 120px;
+    padding-bottom:115.2px;
+}
+.assistance-contact{
+    color: white;
+}
+
+.assistance-form{
+    width: 45%;
+    margin-top: 20px;
+}
+
+.assistance-btn{
+    text-transform: uppercase;
+    background-color: #ffffff;
+    font-size: 20px;
+    color: black;
+    padding: 8px 20px;
+    border: none;
+    text-align: center;
+    border-color: white;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.assistance-btn:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.assistance-msg{
+    width: 100%;
+    padding: 16px;
+}
+
+.container-form{
+    background-color: #1b1b1b;
+    width: 70% ;
+    height: 450px;
+    z-index: -1;
+    position: relative;
+    left: 52%;
+    bottom: 60%;
+}
+
+.assistance-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:35px;
+
+}
+
+.assistance-adress p{
+    font-size:13.59px;
+    line-height: 2;
+
+}
+
+.separator{
+    height: 3px!important;
+    width: 35%;
+    margin-bottom: 45px;
+    margin-top: 30px;
+    color: #3b8900;
+    opacity: 1;
+}
+input{
+    padding: 16px!important;
+}

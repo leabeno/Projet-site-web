@@ -4,39 +4,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Site Web Projet</title>
 		<link rel="stylesheet" href="sitestyle.css">
+
+		<script type="text/javascript" src="script.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<<<<<<< HEAD
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-=======
->>>>>>> eb2acd653a7d74682ab56f7a38e668f51f539f62
 	</head>
 	<body>
-		<!--Menu-->
-        <div class="container">
-		<div class="accueil">
-			<header>
-				<div class="wrapper">
-					<div class="logo">
-						<a href="#">Nom/Logo de l'agence</a>
-					</div>
-					<nav>
-						<a href="site.html">Accueil</a>
-						<a href="#info">À propos de nous</a>
-<<<<<<< HEAD
-						<a href="#">Acheter</a>
-=======
-						<a href="/page-acheter.html">Acheter</a>
->>>>>>> eb2acd653a7d74682ab56f7a38e668f51f539f62
-						<a href="#">Vendre</a>
-						<a href="#contact">Contact</a>
-					</nav>
-				</div>
-			</header>
-		</div>
-		<!--Fin Menu-->
-		</div> 
+		<!--Menu BOOTSTRAP BURGER-->
+		<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse nav-item-right" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/site.html">Acceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#info">À propos de nous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/acheter.html">Acheter</a>
+	  </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/vendre.html">Vendre</a>
+	  </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/assistance.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+		<div class="parallax"></div> 
+		
+		<!--Fin Menu BOOTSTRAP BURGER-->
+		
 		<!--À propos-->
 		<div class="content-area" id="info">
 			<div class="wrapper">
@@ -51,6 +58,8 @@
 			</div>
 		</div>
 		<!-- Fin À propos-->
+		        <div class="parallax"></div> 
+
 		<!--Contact-->
 		<div class="contact_container" id="contact">
 			<h2>Contact</h2>
@@ -74,16 +83,20 @@
 			<div class="form-wrapper"> 
 	
 			<div class="form-container" data-aos="zoom-in-right">
-				<form action="" method="get">
-					<div class="form-item">
-					<input type="text" name="nom" placeholder="Entrez votre nom" id="nom" required>
-					<input type="text" name="mail" placeholder="Entrez votre mail" id="mail" required>
+				<form action="">
+					<div class="form-item" >
+				
+					<input  type="text" name="nom" placeholder="Entrez votre nom" id="nom" >
+ 					<span id="errorname"></span>					
+					 <input type="text" name="mail" placeholder="Entrez votre mail" id="mail">
+					<span id="errormail"></span>					
+
 					</div>
 					<div>
 					<textarea name="message" rows="5" id="message" placeholder="Message" required></textarea>
 					</div>
 					<div class="btn">
-					<button class="button-container" id="submit" type="submit" value="SEND">
+					<button class="button-container primary"type="submit" onclick="formValidation()">
 						<div class="button" >
 							<i class="fa fa-paper-plane img-btn "></i><span class="text-button">Envoyez ma demande</span>
 						</div>
@@ -96,6 +109,7 @@
 			</div>
 		</div>
 		<!--Fin contact-->
+        <div class="parallax"></div> 
 
 		<!--Footer-->
 		<footer>
@@ -132,8 +146,12 @@
 		  </footer>
 		  <!--Fin Footer-->
   </body>
-  	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
  	<script>
+		 
  	 	AOS.init();
 	</script>
 </html>

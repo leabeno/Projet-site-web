@@ -2,34 +2,44 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Site Web Projet</title>
+		<title>Acheter un bien</title>
 		<link rel="stylesheet" href="sitestyle.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-		<link href="script.js"/>
+		<script type="text/javascript" src="script.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+      	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 	</head>
 	<body>
-    <!--Menu-->
-    <div class="container">
-		<div class="accueil">
-			<header>
-				<div class="wrapper">
-					<div class="logo">
-						<a href="#">Nom/Logo de l'agence</a>
-					</div>
-					<nav>
-						<a href="/site.html">Accueil</a>
-						<a href="#info">À propos de nous</a>
-						<a href="/page-acheter.html">Acheter</a>
-						<a href="#">Vendre</a>
-						<a href="#contact">Contact</a>
-					</nav>
-				</div>
-			</header>
-		</div>
-		<!--Fin Menu-->
+    <!--Menu BOOTSTRAP BURGER-->
+		<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse nav-item-right" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/site.html">Acceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#info">À propos de nous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/acheter.html">Acheter</a>
+	  </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/vendre.html">Vendre</a>
+	  </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/assistance.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>		
+		<!--Fin Menu BOOTSTRAP BURGER-->
     </div> 
     <div class="achat-container" id="containerAchat">
         <div class="achat-items">
@@ -55,9 +65,8 @@
       <div class="achat-items">
 			<img class="achat-img"  onclick="myClick();" src="/img/annonce 2.png"/>
 			<div class="item-content" >
-				<div class="achat-title"><h2>Titre de la maison</h2></div>
-				<div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis suscipit pariatur obcaecati facilis 
-					accusantium, sequi necessitatibus nobis explicabo ex</p></div>
+				<div class="achat-title"><h2>Appartement quartier Buttes Chaumont</h2></div>
+				<div><p>Votre agence vous présente en exclusivité cet appartement familial à deux pas de la place d'Italie. Vous cherchez un appartement avec un extérieur ? Les pièces de vie (séjour et deux chambres) possèdent chacune leur balcon.</p></div>
 					<table width="100%" class="item-table">
 						<tr>
 							<td align="center"><i class="fas fa-bed"></i></td>
@@ -66,8 +75,8 @@
 						</tr>
 						<tr>
 							<td align="center"> 2 chambres</td>
-							<td align="center">60 m²</td>
-							<td align="center">5 pièces</td>
+							<td align="center">79,11 m²</td>
+							<td align="center">3 pièces</td>
 						</tr>
 					</table>
 			</div>
@@ -75,9 +84,8 @@
 		<div class="achat-items">
 			<img class="achat-img" onclick="myClick();"src="/img/annonce 3.png"/>
 			<div class="item-content" >
-				<div class="achat-title"><h2>Titre de la maison</h2></div>
-				<div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis suscipit pariatur obcaecati facilis 
-					accusantium, sequi necessitatibus nobis explicabo ex</p></div>
+				<div class="achat-title"><h2>Belle appartement exposition SUD </h2></div>
+				<div><p>Situé au 1er étage d'un immeuble, nous vous proposons un charmant loft profitant d'un plan optimisé et de beaux volumes.</p></div>
 					<table width="100%" class="item-table">
 						<tr>
 							<td align="center"><i class="fas fa-bed"></i></td>
@@ -85,9 +93,9 @@
 							<td align="center"><i class="fas fa-lightbulb"></i></td>
 						</tr>
 						<tr>
-							<td align="center"> 2 chambres</td>
-							<td align="center">60 m²</td>
-							<td align="center">5 pièces</td>
+							<td align="center"> 3 chambres</td>
+							<td align="center">200 m²</td>
+							<td align="center">7 pièces</td>
 						</tr>
 					</table>
 			</div>
@@ -95,9 +103,8 @@
 		<div class="achat-items">
 			<img class="achat-img" onclick="myClick();" src="/img/annonce 4.png"/>
 			<div class="item-content" >
-				<div class="achat-title"><h2>Titre de la maison</h2></div>
-				<div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis suscipit pariatur obcaecati facilis 
-					accusantium, sequi necessitatibus nobis explicabo ex</p></div>
+				<div class="achat-title"><h2>Appartement quartier République</h2></div>
+				<div><p>Calme et avec du caractère, au 3ème étage d'un immeuble de 1805 avec une jolie vue sur la charmante architecture parisienne. -</p></div>
 					<table width="100%" class="item-table">
 						<tr>
 							<td align="center"><i class="fas fa-bed"></i></td>
@@ -106,8 +113,8 @@
 						</tr>
 						<tr>
 							<td align="center"> 2 chambres</td>
-							<td align="center">60 m²</td>
-							<td align="center">5 pièces</td>
+							<td align="center">83 m²</td>
+							<td align="center">3 pièces</td>
 						</tr>
 					</table>
 			</div>
@@ -148,5 +155,8 @@
 		  </footer>
 		  <!--Fin Footer-->
 		<script type="text/javascript" src="script.js"></script>
-    </body>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

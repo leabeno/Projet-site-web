@@ -4,16 +4,9 @@ html {
 
 body {
 	margin: 0 auto;
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins", sans-serif ;
 }
 
-header {
-	height: 90px;
-	background: #262626;
-	width: 100%;
-	z-index: 10;
-	position: fixed;
-}
 
 h2 {
 	text-align: center;
@@ -28,44 +21,17 @@ input {
 	outline: none;
 }
 
-/* style section header*/
-
-.wrapper {
-	width: 80%;
-	margin: 0 auto;
-}
-@media (max-width:640px){
-	
-	.wrapper{
-		display: flex;
-		width: 100%;
-		height: 60px;
-	}
-.nav{
-    display: flex;
-    /* justify-content: left; */
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-}
+.navbar{
+	background-color: #1B1B1B;
+	padding: 30px 20px !important;
 
 }
 
-.logo {
-	width: 30%;
-	float: left;
-	line-height: 85px;
+.nav-item-right{
+	justify-content: flex-end;
 }
-.logo a {
-	text-decoration: none;
-	font-size: 20px;
-	color: #fff;
-	letter-spacing: 5px;
-}
-nav {
-	float: right;
-	line-height: 100px;
-}
+/*  section header*/
+
 nav a {
 	text-decoration: none;
 	letter-spacing: 4px;
@@ -74,14 +40,14 @@ nav a {
 	color: #fff;
 }
 
-.container {
+.parallax{
 	width: 100%;
 	height: 100%;
-	background: url("./img/image\ bg.jpeg") top center;
+	background: url("img/acceuil-bg\ .jpg");
 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	  background-size: cover;
 }
 /*Fin  section header*/
 
@@ -261,7 +227,6 @@ footer ul {
 .fa-chevron-right {
 	font-size: 14px;
 }
-
 
 
 

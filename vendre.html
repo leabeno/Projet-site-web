@@ -7,29 +7,38 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 	</head>
 	<body>
-		<!--Menu-->
-        <div class="container">
-		<div class="accueil">
-			<header>
-				<div class="wrapper">
-					<div class="logo">
-						<a href="#">Nom/Logo de l'agence</a>
-					</div>
-					<nav>
-						<a href="#">Accueil</a>
-						<a href="#info">À propos de nous</a>
-						<a href="#">Acheter</a>
-						<a href="#">Vendre</a>
-						<a href="#contact">Contact</a>
-					</nav>
-				</div>
-			</header>
-		</div>
-		</div>
-		<!--Fin Menu-->
+		<!--Menu BOOTSTRAP BURGER-->
+		<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse nav-item-right" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/site.html">Acceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#info">À propos de nous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/acheter.html">Acheter</a>
+	  </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/vendre.html">Vendre</a>
+	  </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/assistance.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>		
+		<!--Fin Menu BOOTSTRAP BURGER-->
 
 		<!--Vendre-->
 		<div class="vendre_container" id="vendre">
@@ -192,7 +201,9 @@
   		</footer>
   </body>
 
-  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  	<script>
  	 	AOS.init();
