@@ -50,14 +50,23 @@
 
 .container-form{
     background-color: #1b1b1b;
-    width: 70% ;
+    width: 50% ;
     height: 450px;
     z-index: -1;
     position: relative;
-    left: 52%;
+    left: 50%;
     bottom: 60%;
 }
 
+.error-name{
+    color: antiquewhite;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.error-name li{
+    list-style-type: circle;
+}
 .assistance-title{
     text-transform: uppercase;
     font-weight: bold;

@@ -62,21 +62,22 @@
             </div>
         </div>
 
-        <div class="assistance-form">
+        <div class="assistance-form" id="assistance-form">
+          <div class="error-name" id="error-name"></div>
                 <form>
                     <div>
                     <p>
-                        <input  type="text" class="form-control" name="nom" placeholder="Votre nom" id="nom" >
+                        <input  type="text" class="form-control" name="nom" placeholder="Votre nom" id="name" required >
                     </p>
                     <p>
-                        <input  type="text" class="form-control" name="mail" placeholder="Votre mail" id="mail" >
+                        <input  type="text" class="form-control" name="mail" placeholder="Votre mail" id="email" required>
                     </p>
                     <p>
-					<textarea name="message" rows="5" id="message" class="assistance-msg" placeholder="Votre message"></textarea>
+				              	<textarea name="message" rows="5" id="contenu" class="assistance-msg" placeholder="Votre message" required></textarea>
                     </p>
                     </div>
                     <div>
-                        <button type="submit" class="assistance-btn">Envoyer</button>
+                        <button type="submit" class="assistance-btn" onclick="assistanceCheckForm()">Envoyer</button>
                     </div>
                 </form>
         </div>
@@ -84,6 +85,40 @@
                 <div class="container-form"></div>
 
     </div>
+    <!--Footer-->
+		<footer>
+			<div class="footer">
+				<div class="footer-contact">
+					<h3>Contact</h3>
+					<ul>
+						<li> Nom Agence </li>
+						<li> Adresse</li>
+						<li></li>
+						<li><b>Téléphone : </b>+33 1 30456758</li>
+						<li><b>Email : </b>contact@exemple.com </li>
+					</ul>
+				</div>
+				<div class="footer-link">
+					<h3>Lien utiles</h3>
+					<ul>
+						<li><i class="fas fa-chevron-right"></i> Accueil</li>
+						<li><i class="fas fa-chevron-right"></i> À propos</li>
+						<li><i class="fas fa-chevron-right"></i> Vendre</li>
+						<li><i class="fas fa-chevron-right"></i> Acheter</li>
+						<li><i class="fas fa-chevron-right"></i> Mentions légales</li>
+					</ul>
+				</div>
+				<div class="footer-newsletter"> 
+					<h3>Notre newsletter</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur sit amet consectetur</p>
+					<form action method="POST" class="footer-form">
+						<input type="email" name="email" class="footer-email">
+                        <button type="submit" class="footer-btn">Envoyer</button>
+					</form>
+				</div>
+			</div>
+		  </footer>
+		  <!--Fin Footer-->
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
