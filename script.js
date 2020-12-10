@@ -13,8 +13,6 @@ function myClick() {
             style[i].style.display = "none";
         }
     }
-
-
 }
 
 function formValidation() {
@@ -71,3 +69,128 @@ function checkEmail(email) {
     return re.test(email);
 }
 
+function assistanceCheckForm() {
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var contenu = document.getElementById("contenu");
+
+    var parent = document.getElementById("error-name");
+    var newDiv = document.createElement('div');
+    newDiv.className = "error-item";
+
+    if (name.value == "" && email.value == "" && contenu.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+         <span> S'il vous plaît, remplissez les champs suivants:</span>
+                <ul> 
+                    <li> Votre nom </li>
+                    <li> Votre adresse e-mail</li>
+                    <li> Votre message </li>
+                </ul>
+        `;
+        name.style.borderColor = "red";
+        email.style.borderColor = "red";
+        contenu.style.borderColor = "red";
+
+    }
+    else if (name.value == "" && email.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+                 <span> S'il vous plaît, remplissez les champs suivants:</span>
+                    <ul> 
+                        <li> Votre nom </li>
+                        <li> Votre adresse e-mail</li>
+                    </ul>
+        `;
+        name.style.borderColor = "red";
+        email.style.borderColor = "red";
+        name.style.borderWidth = "2px"
+
+    }
+
+    else if (name.value == "" && contenu.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+         
+                 <span> S'il vous plaît, remplissez les champs suivants:</span>
+                    <ul> 
+                        <li> Votre nom </li>
+                        <li> Votre message</li>
+                    </ul>
+        `;
+        name.style.borderColor = "red";
+        contenu.style.borderColor = "red";
+
+
+
+    }
+    else if (email.value == "" && contenu.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+
+        newDiv.innerHTML = `
+        
+                <span> S'il vous plaît, remplissez les champs suivants:</span>
+                    <ul> 
+                        <li> Votre adresse e-mail</li>
+                        <li> Votre message </li>
+                    </ul>
+        `;
+        email.style.borderColor = "red";
+        contenu.style.borderColor = "red";
+    }
+
+
+    else if (name.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+         
+            <span> S'il vous plaît, remplissez les champs suivants:</span>
+
+                    <ul> 
+                        <li> Votre nom </li>
+                    </ul>
+         `;
+        name.style.borderColor = "red";
+
+    }
+    else if (email.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+         
+            <span> S'il vous plaît, remplissez les champs suivants:</span>
+
+                    <ul> 
+                        <li> Votre e-mail </li>
+                    </ul>
+         `;
+        email.style.borderColor = "red";
+
+    }
+    else if (contenu.value == "") {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+           <span> S'il vous plaît, remplissez les champs suivants:</span>
+
+                    <ul> 
+                        <li> Votre message </li>
+                    </ul>
+         `;
+        contenu.style.borderColor = "red";
+
+    }
+    parent.appendChild(newDiv);
+}
