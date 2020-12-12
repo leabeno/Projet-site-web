@@ -2,7 +2,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Site Web Projet</title>
+        <title>Site Web Projet</title>
+        <script type="text/javascript" src="script.js"></script>
+
 		<link rel="stylesheet" href="sitestyle.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -39,145 +41,90 @@
   </div>
 </nav>		
 		<!--Fin Menu BOOTSTRAP BURGER-->
-
-		<!--Vendre-->
-		<div class="vendre_container" id="vendre">
-			<h2>Vendre et estimer votre bien</h2>
-			<div class="vendre_wrapper">
-				<div class="form-estimation">
-					<form action="" method="get">
-							<h3>Localisation</h3>
-							<table width="75%">
-								<tr><td><input type="text" name="adresse" placeholder="Adresse complète"></td></tr>
-							</table>
-							
-							<h3>Type de bien</h3>
-							<table border="1" width="75%">
-							<tr>
-								<td><input type="radio" name="appartement">Appartement</td>
-								<td><input type="radio" name="maison">Maison</td>
-							</tr>
-							</table>
-							
-							<h3>Caractéristiques du bien</h3>
-							<table width="75%">
-							<tr>
-								<td><input type="text" name="surface-habitable" placeholder="Surface habitable"></td>
-								<td><input type="text" name="surface-parcelle" placeholder="Surface parcelle"></td>
-							</tr>
-							<tr>
-								<td><input type="text" name="nb-pieces" placeholder="Nombre de pièces"></td>
-								<td><input type="text" name="periode-construction" placeholder="Période de construction"></td>
-							</tr>
-							</table>
-							
-							<h3>Délai</h3>
-							<table width="75%">
-							<tr>
-								<td><select name="delai">
-									<option disabled selected>Délai de vente souhaité</option>
-									<option>Rapidement</option>
-									<option>Dans les mois à venir</option>
-									<option>Éventuellement</option>
-									</select>
-								</td>
-							</tr>
-							</table>
-							
-							<h3>Recevez votre estimation par email</h3>
-							<table width="75%">
-							<tr>
-								<td>Nom</td>
-								<td>Prénom</td>
-							</tr>
-							<tr>
-								<td><input type="text" name="prenom" placeholder="Nom"></td>
-								<td><input type="text" name="prenom" placeholder="Prénom"></td>
-							</tr>
-							</table>
-							
-							<h3>Adresse email</h3>
-							<table width="75%">
-							<tr>
-								<td><input type="text" name="email" placeholder="Adresse email"></td>
-							</tr>
-							</table>
-							
-							<h3>Numéro de téléphone</h3>
-							<table width="75%">
-							<tr>
-								<td><input type="text" name="telephone" placeholder="Numéro de téléphone"></td>
-							</tr>
-							</table>
-							
-							<table width="75%">
-							<tr>
-								<td></td>
-								<td align="right">
-									<input type="reset" value="Annuler">
-									<input type="button" value="Finaliser la demande">
-								</td>
-							</tr>
-							</table>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- Fin Vendre-->
-		<!--Contact-->
-		<div class="contact_container" id="contact">
-			<h2>Contact</h2>
-			<div class="info-wrapper" data-aos="fade-up">
-				<div class="contact-box">
-					<i class="fas fa-at contact-icon"></i>
-					<h3>Écrivez nous !</h3> 
-					<p>contact@exemple.com</p>
-				</div>
-				<div class="contact-box">
-					<i class="fas fa-phone contact-icon"></i>				
-					<h3>Appelez nous !</h3>
-					<p>+33 1 30456758</p>
-				</div>
-				<div class="contact-box">
-					<i class="fas fa-map-marker-alt contact-icon"></i>
-				<h3>Rendez-nous visite !</h3>
-				<p>Lorem ipsum dolor sit amet consectetur</p>
-				</div>
-			</div>
-			<div class="form-wrapper"> 
-	
-			<div class="form-container" data-aos="zoom-in-right">
-				<form action="" method="get">
-					<div class="form-item">
-					<input type="text" name="nom" placeholder="Entrez votre nom" id="nom" required>
-					<input type="text" name="mail" placeholder="Entrez votre mail" id="mail" required>
-					</div>
-					<div>
-					<textarea name="message" rows="5" id="message" placeholder="Message" required></textarea>
-					</div>
-					<div class="btn">
-					<button class="button-container" id="submit" type="submit" value="SEND">
-						<div class="button" >
-							<i class="fa fa-paper-plane img-btn "></i><span class="text-button">Envoyez ma demande</span>
-						</div>
-					</button>
-					</div>
-				</form>
-			</div>
-			<div class="maps" data-aos="zoom-in-left">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.635532992438!2d2.3627030156392013!3d48.82701511086955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e672278c32ee07%3A0x9f1bb5e600a4b9da!2s90%20Rue%20de%20Tolbiac%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1606145146358!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>			</div>
-			</div>
-		</div>
-		<!--Fin contact-->
-
+        <div class="container-vendre">
+        <div class="estimation-container ">
+            <h4>Nous estimons la valeur actuelle de votre bien en fonction de ses caractéristiques</h4>
+            <div class="adresse tab">
+                <input type="text" name="adresse" placeholder="Votre adresse" required> 
+                <button class="estimation-btn" onclick="nextPrev(1)">Estimer mon bien</button>
+            </div>
+            <div class="type  estimation-style tab">
+                <h4>Quel type de bien souhaitez vous estimer ?</h4>
+                <div class="flex-btn">
+                <button class="btn-type" onclick="nextPrev(1)">Maison</button>
+                <button class="btn-type" onclick="nextPrev(1)">Appartement</button>
+                </div>
+            </div>
+            <div class="surface  ">
+                <div class="input-suface estimation-style tab">
+                    <h4>Quelle est la surface de votre bien ?</h4>
+                    <input type="number" name="surface" placeholder="Surface" required> 
+                    <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
+                </div>
+            </div>
+            <div class="piece ">
+                <div class="input-piece estimation-style tab">
+                    <h4>Combien y a-t-il de pièces ?</h4>
+                    <input type="number" name="surface" placeholder="Surface" required> 
+                    <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
+                </div>
+            </div>
+           <div class="annee">
+               <div class="estimation-style tab">
+                   <h4>Année de construction ?</h4>
+                    <select name="annee">
+                        <option value="">--Choissiez l'année--</option>
+                        <option value="1">Avant 1850</option>
+                        <option value="2">1850 - 1913</option>
+                        <option value="3">1914 - 1947</option>
+                        <option value="4">1948 - 1974</option>
+                        <option value="5">1975 - 1984</option>
+                        <option value="6">1985 - 2007</option>
+                        <option value="7">Depuis 2008</option>
+                    </select>                    
+                    <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
+               </div>
+           </div>
+            <div class="travaux  estimation-style tab">
+                <h4>Des travaux sont à prévoir ?</h4>
+                <div class="flex-btn">
+                <button class="btn-type" onclick="nextPrev(1)">OUI</button>
+                <button class="btn-type" onclick="nextPrev(1)">NON</button>
+                </div>
+            </div>
+            <div class="cave  estimation-style tab">
+                <h4> Avez-vous une cave ?</h4>
+                <div class="flex-btn">
+                <button class="btn-type"  onclick="clickCave()">OUI</button>
+                <button class="btn-type" onclick="nextPrev(1)">NON</button>
+                </div>
+                <div class="caveS" id="cave" >
+                    <input type="number" name="surfaceCave" placeholder="Surface cave" required>
+                    <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
+                </div>
+            </div>
+            <div class="vue  estimation-style tab">
+                <h4> Quelle est l'exoposition de votre bien</h4>
+                <div class="flex-btn">
+                <button class="btn-type" onclick="nextPrev(1)">Nord</button>
+                <button class="btn-type" onclick="nextPrev(1)">Sud</button>
+                <button class="btn-type" onclick="nextPrev(1)">Est</button>
+                <button class="btn-type" onclick="nextPrev(1)">Ouest</button>
+                </div>
+            </div>
+        </div>
+        </div>
 		<!--Footer-->
 		<footer>
 			<div class="footer">
 				<div class="footer-contact">
 					<h3>Contact</h3>
 					<ul>
-						<li><i class="fas fa-chevron-right"></i> Lorem, ipsum dolor sit</li>
-						<li><i class="fas fa-chevron-right"></i> Lorem, ipsum</li>
+						<li> Nom Agence </li>
+						<li> Adresse</li>
+						<li></li>
+						<li><i class="fas fa-chevron-right"></i> <span>Téléphone : </span> +33 1 30456758</li>
+						<li><i class="fas fa-chevron-right"></i> <span> Email : </span> contact@exemple.com </li>
 					</ul>
 				</div>
 				<div class="footer-link">
@@ -185,7 +132,8 @@
 					<ul>
 						<li><i class="fas fa-chevron-right"></i> Accueil</li>
 						<li><i class="fas fa-chevron-right"></i> À propos</li>
-						<li><i class="fas fa-chevron-right"></i> Catalogue</li>
+						<li><i class="fas fa-chevron-right"></i> Vendre</li>
+						<li><i class="fas fa-chevron-right"></i> Acheter</li>
 						<li><i class="fas fa-chevron-right"></i> Mentions légales</li>
 					</ul>
 				</div>
@@ -194,11 +142,12 @@
 					<p>Lorem ipsum dolor, sit amet consectetur sit amet consectetur</p>
 					<form action method="POST" class="footer-form">
 						<input type="email" name="email" class="footer-email">
-						<input type="submit" name="Envoyer" class="footer-btn">
+                        <button type="submit" class="footer-btn ">Envoyer</button>
 					</form>
 				</div>
 			</div>
-  		</footer>
+		  </footer>
+		  <!--Fin Footer-->
   </body>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
