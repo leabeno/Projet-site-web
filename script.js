@@ -61,7 +61,6 @@ function formValidation() {
         return false;
     }
 
-
 }
 
 function checkEmail(email) {
@@ -73,8 +72,8 @@ function assistanceCheckForm() {
     var name = document.getElementById("name");
     var email = document.getElementById("email");
     var contenu = document.getElementById("contenu");
-
     var parent = document.getElementById("error-name");
+    //Création d'un nouvel element div du DOM 
     var newDiv = document.createElement('div');
     newDiv.className = "error-item";
 
@@ -111,8 +110,8 @@ function assistanceCheckForm() {
         name.style.borderWidth = "2px"
 
     }
+    else if (name.value == "" && contenu.value == "" && !checkEmail(email)) {
 
-    else if (name.value == "" && contenu.value == "") {
         while (parent.hasChildNodes()) {
             parent.removeChild(parent.firstChild);
         }
@@ -123,6 +122,11 @@ function assistanceCheckForm() {
                         <li> Votre nom </li>
                         <li> Votre message</li>
                     </ul>
+                <span> Veuillez corriger les erreurs suivantes :</span>
+                    <ul> 
+                        <li> E-mail non valide </li>
+                    </ul>
+         
         `;
         name.style.borderColor = "red";
         contenu.style.borderColor = "red";
@@ -146,8 +150,6 @@ function assistanceCheckForm() {
         email.style.borderColor = "red";
         contenu.style.borderColor = "red";
     }
-
-
     else if (name.value == "") {
         while (parent.hasChildNodes()) {
             parent.removeChild(parent.firstChild);
@@ -192,5 +194,58 @@ function assistanceCheckForm() {
         contenu.style.borderColor = "red";
 
     }
+    else if (!checkEmail(email)) {
+        while (parent.hasChildNodes()) {
+            parent.removeChild(parent.firstChild);
+        }
+        newDiv.innerHTML = `
+         
+            <span> Veuillez corriger les erreurs suivantes :</span>
+
+                    <ul> 
+                        <li> E-mail non valide </li>
+                    </ul>
+         `;
+        email.style.borderColor = "red";
+    }
+
+    //Ajout de la div avec le contenu erreur 
     parent.appendChild(newDiv);
 }
+
+
+
+
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+    // This function will display the specified tab of the form...
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+    x[n].style.marginTop = "70px";
+
+}
+
+function nextPrev(n) {
+    // This function will figure out which tab to display
+    var x = document.getElementsByClassName("tab");
+    // Hide the current tab:
+    x[currentTab].style.opacity = "0.3";
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form...
+    if (currentTab >= x.length) {
+        // ... the form gets submitted:
+        document.getElementById("regForm").submit();
+        return false;
+    }
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+}
+
+function clickCave() {
+    var cave = document.getElementById("cave");
+    cave.style.display = "block";
+}
+
