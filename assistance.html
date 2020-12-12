@@ -64,16 +64,16 @@
 
         <div class="assistance-form" id="assistance-form">
           <div class="error-name" id="error-name"></div>
-                <form>
+                <form action="/site.html" method=""> 
                     <div>
                     <p>
-                        <input  type="text" class="form-control" name="nom" placeholder="Votre nom" id="name" required >
+                        <input  type="text" class="form-control" name="nom" minlength="3" placeholder="Votre nom" id="name" required >
                     </p>
                     <p>
-                        <input  type="text" class="form-control" name="mail" placeholder="Votre mail" id="email" required>
+                        <input  type="email" class="form-control" name="mail" placeholder="Votre mail" id="email" required>
                     </p>
                     <p>
-				              	<textarea name="message" rows="5" id="contenu" class="assistance-msg" placeholder="Votre message" required></textarea>
+				              	<textarea name="message" rows="5" id="contenu" class="assistance-msg" minlength="10" placeholder="Votre message" required></textarea>
                     </p>
                     </div>
                     <div>
@@ -85,6 +85,9 @@
                 <div class="container-form"></div>
 
     </div>
+
+
+</div>
     <!--Footer-->
 		<footer>
 			<div class="footer">
@@ -118,7 +121,7 @@
 				</div>
 			</div>
 		  </footer>
-		  <!--Fin Footer-->
+      <!--Fin Footer-->
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
