@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Site Web Projet</title>
+        <title>Estimer mon bien</title>
         <script type="text/javascript" src="script.js"></script>
 
 		<link rel="stylesheet" href="sitestyle.css">
@@ -45,54 +45,54 @@
         <div class="estimation-container ">
             <h4>Nous estimons la valeur actuelle de votre bien en fonction de ses caractéristiques</h4>
             <div class="adresse tab">
-                <input type="text" name="adresse" placeholder="Votre adresse" required> 
+                <input id='adresse' type="text" name="adresse" placeholder="Votre adresse" required> 
                 <button class="estimation-btn" onclick="nextPrev(1)">Estimer mon bien</button>
             </div>
-            <div class="type  estimation-style tab">
+            <div class="type  estimation-style tab" >
                 <h4>Quel type de bien souhaitez vous estimer ?</h4>
                 <div class="flex-btn">
                 <button class="btn-type" onclick="nextPrev(1)">Maison</button>
                 <button class="btn-type" onclick="nextPrev(1)">Appartement</button>
                 </div>
             </div>
-            <div class="surface  ">
+            <div class="surface">
                 <div class="input-suface estimation-style tab">
                     <h4>Quelle est la surface de votre bien ?</h4>
-                    <input type="number" name="surface" placeholder="Surface" required> 
+                    <input type="number" id="surface" name="surface" placeholder="Surface" required> 
                     <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
                 </div>
             </div>
-            <div class="piece ">
+            <div class="piece">
                 <div class="input-piece estimation-style tab">
                     <h4>Combien y a-t-il de pièces ?</h4>
-                    <input type="number" name="surface" placeholder="Surface" required> 
+                    <input type="number" id="piece" name="surface" placeholder="Surface" required> 
                     <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
                 </div>
             </div>
            <div class="annee">
-               <div class="estimation-style tab">
+               <div class="estimation-style tab" >
                    <h4>Année de construction ?</h4>
-                    <select name="annee">
+                    <select id="annee" name="annee">
                         <option value="">--Choissiez l'année--</option>
-                        <option value="1">Avant 1850</option>
-                        <option value="2">1850 - 1913</option>
-                        <option value="3">1914 - 1947</option>
-                        <option value="4">1948 - 1974</option>
-                        <option value="5">1975 - 1984</option>
-                        <option value="6">1985 - 2007</option>
-                        <option value="7">Depuis 2008</option>
+                        <option value="Avant 1850">Avant 1850</option>
+                        <option value="1850 - 1913">1850 - 1913</option>
+                        <option value="1914 - 1947">1914 - 1947</option>
+                        <option value="1948 - 1974">1948 - 1974</option>
+                        <option value="1975 - 1984">1975 - 1984</option>
+                        <option value="1985 - 2007">1985 - 2007</option>
+                        <option value="Depuis 2008">Depuis 2008</option>
                     </select>                    
                     <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
                </div>
            </div>
-            <div class="travaux  estimation-style tab">
+             <div class="travaux  estimation-style tab">
                 <h4>Des travaux sont à prévoir ?</h4>
                 <div class="flex-btn">
                 <button class="btn-type" onclick="nextPrev(1)">OUI</button>
                 <button class="btn-type" onclick="nextPrev(1)">NON</button>
                 </div>
             </div>
-            <div class="cave  estimation-style tab">
+             <div class="cave  estimation-style tab">
                 <h4> Avez-vous une cave ?</h4>
                 <div class="flex-btn">
                 <button class="btn-type"  onclick="clickCave()">OUI</button>
@@ -103,7 +103,7 @@
                     <button class="btn-continuer" onclick="nextPrev(1)">Continuer</button>
                 </div>
             </div>
-            <div class="vue  estimation-style tab">
+           <div class="vue  estimation-style tab">
                 <h4> Quelle est l'exoposition de votre bien</h4>
                 <div class="flex-btn">
                 <button class="btn-type" onclick="nextPrev(1)">Nord</button>
@@ -111,6 +111,8 @@
                 <button class="btn-type" onclick="nextPrev(1)">Est</button>
                 <button class="btn-type" onclick="nextPrev(1)">Ouest</button>
                 </div>
+            </div>
+            <div id="recapitulatif" data-aos="fade-up" data-aos-duration="3000">
             </div>
         </div>
         </div>
@@ -149,10 +151,9 @@
 		  </footer>
 		  <!--Fin Footer-->
   </body>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  	<script>
  	 	AOS.init();

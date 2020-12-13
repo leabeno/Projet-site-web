@@ -1,20 +1,18 @@
-//var text = document.getElementById("myClick").addEventListener('click', myClick)
-
-
+// fonction page Acheter 
 function myClick() {
 
     var style = document.getElementsByClassName('item-content');
 
     for (var i = 0; i < style.length; i++) {
         if (style[i].style.display == "none") {
-            style[i].style.display = "block";
+            style[i].style.display = "flex";
         }
         else {
             style[i].style.display = "none";
         }
     }
 }
-
+// Validation formulaire Accueil 
 function formValidation() {
     var nom = document.getElementById("nom");
     var mail = document.getElementById("mail");
@@ -62,12 +60,12 @@ function formValidation() {
     }
 
 }
-
+// Verification email
 function checkEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-
+// Validation formulaire page assistance
 function assistanceCheckForm() {
     var name = document.getElementById("name");
     var email = document.getElementById("email");
@@ -220,7 +218,7 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
 function showTab(n) {
-    // This function will display the specified tab of the form...
+    // Permet de mettre en display le bon encart 
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
     x[n].style.marginTop = "70px";
@@ -230,14 +228,14 @@ function showTab(n) {
 function nextPrev(n) {
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
-    // Hide the current tab:
+    //Réduire l'opacité de l'encart actulle
     x[currentTab].style.opacity = "0.3";
     // Increase or decrease the current tab by 1:
     currentTab = currentTab + n;
     // if you have reached the end of the form...
     if (currentTab >= x.length) {
         // ... the form gets submitted:
-        document.getElementById("regForm").submit();
+        ValidationR();
         return false;
     }
     // Otherwise, display the correct tab:
@@ -247,5 +245,31 @@ function nextPrev(n) {
 function clickCave() {
     var cave = document.getElementById("cave");
     cave.style.display = "block";
+}
+
+function ValidationR() {
+    var adresse = document.getElementById('adresse');
+    var surface = document.getElementById("surface");
+    var piece = document.getElementById("piece");
+    var Recap = document.getElementById('recapitulatif')
+
+    var txt = document.createElement('h4');
+    var txt2 = document.createElement('h4');
+    var txt3 = document.createElement('h4');
+
+    txt.innerHTML = "Votre adresse est :" + " " + adresse.value;
+    txt2.innerHTML = "Vous avez une surface de " + "  " + surface.value + "m²" + " " + "et vous avez" + " " + piece.value + " " + "pièces";
+    Recap.append(txt, txt2);
+
+    if (piece.value <= 2) {
+        txt3.innerHTML = "Notre estimation est de 430 567€ !";
+        Recap.append(txt3);
+
+    }
+    if (piece.value > 2) {
+        txt3.innerHTML = "Notre estimation est de 555 489€ !";
+        Recap.append(txt3);
+
+    }
 }
 
