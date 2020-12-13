@@ -189,6 +189,17 @@ nav a {
     flex-direction: column;
     margin-top: 20px;
 }
+input[type="checkbox" i] {
+appearance: none;
+}
+
+
+#recapitulatif {
+	color: red;
+	color:white;
+	text-align: center;
+
+}
 .adresse input{
 	padding: 8px;
 	width: 70%;
@@ -238,6 +249,10 @@ nav a {
 .btn-type:hover{
 	background-color:#8fc04e;
 }
+
+
+
+
 
 /* Fin Section Vendre */
 
@@ -456,4 +471,26 @@ footer ul {
 .item-table{
 	margin-top: 18px;
 }
+
+.btn-acheter{
+	width: 32%;
+	text-transform: uppercase;
+    font-size: 17px;
+    padding: 8px 20px;
+	font-weight: bold;
+	border-radius: 20px;
+	background-color: white;
+	border: none;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	color: #1B1B1B;
+	margin-top: 30px;
+
+}
+
+.btn-acheter:hover{
+	background-color: #1B1B1B;
+	color: white;
+}
+
 
