@@ -4,6 +4,7 @@ html {
 
 body {
 	margin: 0 auto;
+	padding :0;
 	font-family: "Poppins", sans-serif  !important;
 }
 
@@ -188,13 +189,9 @@ nav a {
     flex-direction: column;
     margin-top: 20px;
 }
-input[type="checkbox" i] {
-appearance: none;
-}
 
 
 #recapitulatif {
-	color: red;
 	color:white;
 	text-align: center;
 
@@ -250,9 +247,6 @@ appearance: none;
 }
 
 
-
-
-
 /* Fin Section Vendre */
 
 
@@ -263,7 +257,6 @@ appearance: none;
 	background-color: #FFFFFF;
 }
 
-/* aligne les box horizontalement avec le même ecart*/
 .info-wrapper {
 	display: flex;
 	justify-content: space-around;
@@ -362,14 +355,16 @@ appearance: none;
 }
 
 /* fin style section contact */
+
+
+/* Footer */
+
 .form-wrapper {
 	display: flex;
 	justify-content: space-between;
 	width: 83%;
 	margin: 43px auto;
 }
-
-/* Footer */
 
 .footer {
 	display: flex;
@@ -469,12 +464,10 @@ footer ul {
 
 .fa-bed,.fa-home,.fa-lightbulb{
 	font-size: 36px;
-
 }
 
 .item-table td{
 	font-size:14px;
-
 }
 
 .item-table{

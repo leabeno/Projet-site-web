@@ -1,4 +1,4 @@
-// fonction page Acheter 
+// Permet d'ouvrir et fermer les différents encarts 
 function myClick() {
 
     var style = document.getElementsByClassName('item-content');
@@ -16,7 +16,6 @@ function myClick() {
 function formValidation() {
     var nom = document.getElementById("nom");
     var mail = document.getElementById("mail");
-    var message = document.getElementById("message").value;
 
     if (nom.value == "") {
         var error = document.getElementById('errorname');
@@ -65,6 +64,7 @@ function checkEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+
 // Validation formulaire page assistance
 function assistanceCheckForm() {
     var name = document.getElementById("name");
@@ -214,39 +214,41 @@ function assistanceCheckForm() {
 
 
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
+var currentTab = 0; // Initialisation de l'encart à 0
+showTab(currentTab); // Appelle de la fonction 
 
 function showTab(n) {
-    // Permet de mettre en display le bon encart 
+    // Permet de mettre en display block le bon encart 
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
     x[n].style.marginTop = "70px";
 
 }
 
+// Permet d'afficher l'encart suivant au click 
 function nextPrev(n) {
-    // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     //Réduire l'opacité de l'encart actulle
     x[currentTab].style.opacity = "0.3";
-    // Increase or decrease the current tab by 1:
+    // Passe à l'encart suivant 
     currentTab = currentTab + n;
-    // if you have reached the end of the form...
+    // Si dernier encart..
     if (currentTab >= x.length) {
-        // ... the form gets submitted:
+        // ... on appelle la fonction suivante
         ValidationR();
         return false;
     }
-    // Otherwise, display the correct tab:
+    // Sinon, On display l'encart suivant
     showTab(currentTab);
 }
 
+// Permet d'afficher l'input surface Cave si OUI
 function clickCave() {
     var cave = document.getElementById("cave");
     cave.style.display = "block";
 }
 
+// Récupère et affiche le récapitulatif et l'estmation
 function ValidationR() {
     var adresse = document.getElementById('adresse');
     var surface = document.getElementById("surface");
