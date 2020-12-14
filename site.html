@@ -13,6 +13,8 @@
 
 	</head>
 	<body>
+				<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
 		<!--NavBar BOOTSTRAP-->
 		<nav class="navbar navbar-expand-lg">
   <a class="navbar-brand" href="/site.html">Real Estate Paris</a>
@@ -40,11 +42,14 @@
     </ul>
   </div>
 </nav>
-		<div class="parallax">		<div class="welcome"> <div class="welcome-container" data-aos="fade-up" data-aos-duration="3000">
+		<div class="parallax">
+	
+	<div class="welcome"> 
+			<div class="welcome-container" data-aos="fade-up" data-aos-duration="3000">
 			<h1>Bienvenue chez Real Estate Paris</h1>
 			<h2>Le numéro 1 de l'immobillier de luxe à Paris</h2>
 			<a href="#info">Découvrir</a>
-		</div>
+			</div>
 	</div>
 </div> 
 		<!--NavBar BOOTSTRAP -->
@@ -151,5 +156,26 @@
  	<script>
 		 
  	 	AOS.init();
+	</script>
+	<script>
+	//Récupérer le bouton haut de page 
+	var mybutton = document.getElementById("myBtn");
+
+	// Quand scroll de 70px montrer le bouton 
+	window.onscroll = function () { scrollFunction() };
+
+	function scrollFunction() {
+    if (document.body.scrollTop > 70|| document.documentElement.scrollTop > 70) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+	}
+
+	// Quand clique sur le bouton remonter en haut de page 
+	function topFunction() {
+    	document.body.scrollTop = 0;
+    	document.documentElement.scrollTop = 0;
+	}
 	</script>
 </html>
